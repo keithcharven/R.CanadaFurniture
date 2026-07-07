@@ -1,0 +1,141 @@
+.booking-modal {
+  max-width: 620px;
+  width: 95%;
+}
+
+.booking-modal-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-gray-500);
+  margin-top: 2px;
+}
+
+/* Meeting Type Selector */
+.booking-meeting-types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.meeting-type-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.meeting-type-option input {
+  display: none;
+}
+
+.meeting-type-option:hover {
+  border-color: var(--color-pink-300);
+}
+
+.meeting-type-option.active {
+  border-color: var(--color-pink-500);
+  background: var(--color-pink-50);
+}
+
+.meeting-type-icon {
+  font-size: 1.5rem;
+}
+
+.meeting-type-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+/* Form */
+.booking-form .form-icon {
+  vertical-align: -2px;
+  margin-right: 4px;
+  color: var(--color-pink-500);
+  font-size: 0.85rem;
+}
+
+.booking-phone-row {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.booking-country-select {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.booking-row {
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* Consent */
+.booking-consent {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-lg);
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.booking-consent input {
+  margin-top: 3px;
+  flex-shrink: 0;
+  accent-color: var(--color-pink-500);
+}
+
+.booking-consent a {
+  color: var(--color-pink-500);
+  text-decoration: underline;
+}
+
+/* Success */
+.booking-success {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.booking-success-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+}
+
+.booking-success h3 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-pink-700);
+}
+
+.booking-success p {
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-xl);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .booking-meeting-types {
+    grid-template-columns: 1fr;
+  }
+  .booking-phone-row {
+    flex-direction: column;
+  }
+  .booking-country-select {
+    width: 100%;
+  }
+  .booking-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
