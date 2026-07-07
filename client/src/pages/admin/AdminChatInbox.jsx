@@ -3,7 +3,7 @@ import { FiSend } from 'react-icons/fi';
 import { io } from 'socket.io-client';
 import api from '../../services/api';
 
-const SOCKET_URL = 'http://localhost:5000';
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000';
 
 export default function AdminChatInbox() {
   const [conversations, setConversations] = useState([]);
