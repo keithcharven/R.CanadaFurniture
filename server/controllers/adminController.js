@@ -29,8 +29,8 @@ exports.getOverview = async (req, res) => {
 
     const monthlySales = await Order.findAll({
       attributes: [
-        [sequelize.fn('MONTH', sequelize.col('created_at')), 'month'],
-        [sequelize.fn('YEAR', sequelize.col('created_at')), 'year'],
+        [sequelize.fn('EXTRACT', sequelize.literal('MONTH FROM "created_at"')), 'month'],
+        [sequelize.fn('EXTRACT', sequelize.literal('YEAR FROM "created_at"')), 'year'],
         [sequelize.fn('SUM', sequelize.col('total_amount')), 'total'],
         [sequelize.fn('COUNT', sequelize.col('id')), 'count']
       ],
@@ -38,8 +38,14 @@ exports.getOverview = async (req, res) => {
         created_at: { [Op.gte]: sixMonthsAgo },
         status: { [Op.ne]: 'cancelled' }
       },
-      group: [sequelize.fn('MONTH', sequelize.col('created_at')), sequelize.fn('YEAR', sequelize.col('created_at'))],
-      order: [[sequelize.fn('YEAR', sequelize.col('created_at')), 'ASC'], [sequelize.fn('MONTH', sequelize.col('created_at')), 'ASC']]
+      group: [
+        sequelize.fn('EXTRACT', sequelize.literal('MONTH FROM "created_at"')),
+        sequelize.fn('EXTRACT', sequelize.literal('YEAR FROM "created_at"'))
+      ],
+      order: [
+        [sequelize.fn('EXTRACT', sequelize.literal('YEAR FROM "created_at"')), 'ASC'],
+        [sequelize.fn('EXTRACT', sequelize.literal('MONTH FROM "created_at"')), 'ASC']
+      ]
     });
 
     // Top products
