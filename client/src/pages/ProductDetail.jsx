@@ -178,7 +178,7 @@ export default function ProductDetail() {
             {/* Shipping Info */}
             <div className="product-shipping-info">
               <FiTruck />
-              <span>Free delivery on orders over ₱5,000</span>
+              <span>Fast Delivery</span>
             </div>
           </div>
         </div>

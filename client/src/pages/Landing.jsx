@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowRight, FiStar, FiTruck, FiShield, FiHeart } from 'react-icons/fi';
+import { FiArrowRight, FiStar, FiTruck, FiShield, FiHeart, FiHome } from 'react-icons/fi';
 import api from '../services/api';
 import ProductCard from '../components/ProductCard';
 import BookingModal from '../components/BookingModal';
@@ -73,11 +73,11 @@ export default function Landing() {
           <div className="trust-items">
             <div className="trust-item">
               <FiTruck />
-              <span>Free Delivery Over ₱5,000</span>
+              <span>Fast Delivery</span>
             </div>
             <div className="trust-item">
-              <FiShield />
-              <span>1 Year Warranty</span>
+              <FiHome />
+              <span>Space Planning Assistance</span>
             </div>
             <div className="trust-item">
               <FiStar />
