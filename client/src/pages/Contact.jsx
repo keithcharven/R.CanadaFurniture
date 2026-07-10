@@ -110,8 +110,8 @@ export default function Contact() {
                   <FiClock className="contact-info-icon" />
                   <div>
                     <strong>Store Hours</strong>
-                    <p>Mon–Sat: 10 AM – 8 PM</p>
-                    <p>Sun: 11 AM – 6 PM</p>
+                    <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
+                    <p>Sun: 10:00 AM - 5:00 PM</p>
                   </div>
                 </div>
               </div>

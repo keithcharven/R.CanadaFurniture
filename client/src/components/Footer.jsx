@@ -15,7 +15,7 @@ export default function Footer() {
             <Link to="/" className="footer-logo">
               <span className="logo-r">R.</span>
               <span className="logo-canada">Canada</span>
-              <span className="logo-furniture">Furniture</span>
+              <span className="logo-furniture">Furniture MFG</span>
             </Link>
             <p className="footer-tagline">
               Modern home, beautifully made. Premium furniture and design services
@@ -73,8 +73,8 @@ export default function Footer() {
             </ul>
             <div className="footer-hours">
               <strong>Store Hours</strong>
-              <p>Mon–Sat: 10:00 AM – 8:00 PM</p>
-              <p>Sun: 11:00 AM – 6:00 PM</p>
+              <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
+              <p>Sun: 10:00 AM - 5:00 PM</p>
             </div>
           </div>
         </div>

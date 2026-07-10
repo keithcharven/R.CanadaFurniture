@@ -57,7 +57,7 @@ export default function Navbar() {
         <Link to="/" className="navbar-logo">
           <span className="logo-r">R.</span>
           <span className="logo-canada">Canada</span>
-          <span className="logo-furniture">Furniture</span>
+          <span className="logo-furniture">Furniture MFG</span>
         </Link>
 
         {/* Desktop Nav Links */}
